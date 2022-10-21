@@ -1,0 +1,2 @@
+module meal_generator {
+}
