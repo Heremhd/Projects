@@ -1,16 +1,16 @@
 package meal_generator;
+import java.util.Date;
+import java.util.Random;
 
 public class Main {
 	public static void main(String[] args) {
-		Arrays array = new Arrays();
+		Random rand = new Random(System.currentTimeMillis());
+		int column = rand.nextInt(9);// am noob and need this declared within scope of this class :/		
 		
-		for (int i = 0; i<array.lowCal.length; i++){ //iterates through the array to check the values
-			System.out.println();
-				for(int j = 0; j<array.lowCal[i].length;j++) {
-					System.out.println(array.lowCal[i][j]);
-				}
-			
-		}
+		
+		LowCalories meal = new LowCalories(column, 1);
+		meal.getLowCal();
+		
 		
 	}
 }
